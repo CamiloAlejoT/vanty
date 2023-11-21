@@ -1,0 +1,24 @@
+.userList {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    background: lightblue;
+}
+
+.componentContainer {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    align-self: center;
+}
+ul {
+    padding-left: 0px;
+}
+
+li:first-child {
+    background-color: #3f51b5 !important;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}

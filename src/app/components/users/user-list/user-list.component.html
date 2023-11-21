@@ -1,0 +1,38 @@
+<div class="componentContainer">
+    <mat-form-field>
+        <mat-label>Filter by</mat-label>
+        <input matInput placeholder="Name or email" [(ngModel)]="filter">
+    </mat-form-field>
+
+    <br>
+    <ul >
+        <li class="userList">
+            <span>
+                ID
+            </span>
+            <span>
+                Name
+            </span>
+            <span>
+                Email
+            </span>
+        </li>
+        <li class="userList" *ngFor="let user of users | filerUser: filter; let i = index"
+            [style.background-color]="i % 2 === 1 ? '#747eb5' : '#3f51b580'">
+            <span>
+                {{user.id}}
+            </span>
+            <span>
+                {{user.name}}
+            </span>
+            <span>
+                {{user.mail}}
+            </span>
+        </li>
+    </ul>
+
+    <button mat-raised-button color="primary" (click)="getUsersList()">
+        Renew List
+    </button>
+
+</div>
